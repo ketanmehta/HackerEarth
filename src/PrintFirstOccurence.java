@@ -4,15 +4,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 
 /**
  * @author Ketan Mehta
- * @date 
- * @problem_link 
+ * @date 28-Nov-2017
+ * @problem_link https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/practice-problems/algorithm/print-first-occurence/
  */
-
-public class MasterFile {
+public class PrintFirstOccurence {
 
 	public static void main(String args[]) throws Exception {
 		InputReader in = new InputReader(System.in);
@@ -20,7 +21,15 @@ public class MasterFile {
 
 		int t = in.nextInt();
 		for (int i = 0; i < t; i++) {
-			
+			String input = in.readString();
+			List<Character> inputBox = new ArrayList<Character>();
+			for(char c : input.toCharArray()) {
+				if(!inputBox.contains(c)) {
+					System.out.print(c);
+					inputBox.add(c);
+				}
+			}
+			System.out.println();
 		}
 		w.close();
 	}
