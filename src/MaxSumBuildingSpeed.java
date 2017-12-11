@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Ketan Mehta
  * @date 
- * @problem_link 
+ * @problem_link https://www.hackerearth.com/challenge/hiring/practo-developer-hiring-challenge/
  */
 
 class MaxSumBuildingSpeed {
