@@ -18,9 +18,7 @@ public class MasterFile {
 		InputReader in = new InputReader(System.in);
 		PrintWriter w = new PrintWriter(System.out);
 		// Write your code here
-		System.out.println(1 & 10);
-		System.out.println(1 & 10 & 20);
-		System.out.println(1 & 10 & 20 & 1);
+		System.out.println(Character.getNumericValue('6'));
 
 		w.close();
 	}
