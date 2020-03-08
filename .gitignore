@@ -1,0 +1,6 @@
+
+*.xml
+*.pb
+*.class
+.idea
+bin/*

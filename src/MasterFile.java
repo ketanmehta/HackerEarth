@@ -17,11 +17,11 @@ public class MasterFile {
 	public static void main(String args[]) throws Exception {
 		InputReader in = new InputReader(System.in);
 		PrintWriter w = new PrintWriter(System.out);
+		// Write your code here
+		System.out.println(1 & 10);
+		System.out.println(1 & 10 & 20);
+		System.out.println(1 & 10 & 20 & 1);
 
-		int t = in.nextInt();
-		for (int i = 0; i < t; i++) {
-			
-		}
 		w.close();
 	}
 
