@@ -22,7 +22,7 @@ class FairShop implements Comparable<FairShop> {
     }
 }
 
-class TestClass {
+class TestClassPop {
 
     public static void main(String args[]) throws Exception {
 

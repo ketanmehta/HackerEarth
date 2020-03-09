@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.InputMismatchException;
 
-public class Solution {
+public class Solution1 {
     static class InputReader {
         private InputStream stream;
         private byte[] buf = new byte[1024];
