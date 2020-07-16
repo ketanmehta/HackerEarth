@@ -8,11 +8,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
+class TestClassOld implements Comparable<TestClassOld>, Comparator<TestClassOld> {
     public long start;
     public long end;
 
-    public TestClass(long start, long end) {
+    public TestClassOld(long start, long end) {
         this.start = start;
         this.end = end;
     }
@@ -22,7 +22,7 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
     }
 
     @Override
-    public int compare(TestClass i1, TestClass i2) {
+    public int compare(TestClassOld i1, TestClassOld i2) {
         if (i1 == null || i2 == null) {
             return 0;
         }
@@ -30,7 +30,7 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
     }
 
     @Override
-    public int compareTo(TestClass o) {
+    public int compareTo(TestClassOld o) {
         return this.compare(this, o);
     }
 
@@ -47,7 +47,7 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
 
         }
 
-        long out_ = new TestClass(0, 0).NotinRange(R, L, n);
+        long out_ = new TestClassOld(0, 0).NotinRange(R, L, n);
         System.out.println(out_);
 
         wr.close();
@@ -59,11 +59,11 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
         long len = 1000000l;
         long sum = (len * (len + 1)) / 2;
 
-        TestClass[] arr = new TestClass[n];
+        TestClassOld[] arr = new TestClassOld[n];
         for (int i = 0; i < n; i++) {
             long min = Math.min(L[i], R[i]);
             long max = Math.max(L[i], R[i]);
-            arr[i] = new TestClass(min, max);
+            arr[i] = new TestClassOld(min, max);
         }
         if (n == 0) {
             return sum;
@@ -80,7 +80,7 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
         // Traverse all input TestClasss
         //System.out.println("I will run " + (arr.length - 1) + " times");
         for (int i = 1; i < arr.length && index < arr.length; i++) {
-            // If this is not first TestClass and overlaps
+            // If this is not first TestClassOld and overlaps
             // with the previous one
             if (arr[index].end >= arr[i].start) {
                 // Merge previous and current TestClasss
@@ -96,8 +96,8 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
             }
         }
         //System.out.println("I have merged " + index + " TestClasss");
-        Map<String, TestClass> map = new LinkedHashMap<>();
-        for (TestClass nir : arr) {
+        Map<String, TestClassOld> map = new LinkedHashMap<>();
+        for (TestClassOld nir : arr) {
             String key = nir.start + "#" + nir.end;
             if (map.containsKey(key)) {
                 continue;
@@ -109,7 +109,7 @@ class TestClass implements Comparable<TestClass>, Comparator<TestClass> {
         //System.out.print("The Merged TestClasss are: ");
 
         long subtract = 0;
-        for (TestClass nir : map.values()) {
+        for (TestClassOld nir : map.values()) {
             long left = nir.start - 1;
             long right = nir.end;
             //System.out.println("range [" + nir.start + "," + right + "]");
